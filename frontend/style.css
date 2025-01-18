@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  overflow: hidden;
+}
+
+.container {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 1s ease-out;
+}
+
+.title h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.title p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+form select,
+form input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+form select:focus,
+form input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 4px 10px rgba(255, 111, 97, 0.2);
+}
+
+button {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1em;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #e65b52;
+}
+
+.response {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  animation: fadeInUp 1s ease-out;
+}
+
+#rarity-percentage {
+  color: #ff6f61;
+  font-size: 1.5em;
+}
+
+/* Validation message */
+.validation-message {
+  background-color: #ffcccb;
+  color: #900;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 20px;
+  }
+
+  .title h1 {
+      font-size: 1.8em;
+  }
+
+  .title p {
+      font-size: 0.9em;
+  }
+}

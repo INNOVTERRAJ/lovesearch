@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Ideal Match</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>✨ Your love search is here ! ✨</h1>
+            <p>Answer the questions below, and we’ll calculate how rare your dream partner is!</p>
+        </div>
+
+        <!-- Validation message at the top -->
+        <div id="validation-message" class="validation-message" style="display: none;">
+            <p>Please fill out all the required fields!</p>
+        </div>
+
+        <form id="partner-form" class="animated-form">
+            <!-- Gender Selection -->
+            <div class="form-group">
+                <label for="gender">👫 What are you looking for?</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <!-- Age Range Selection -->
+            <div class="form-group">
+                <label for="age-range">🎂 Preferred Age Range</label>
+                <div class="range-container">
+                    <input type="range" id="age-range" name="ageRange" min="18" max="60" step="1" value="25" oninput="updateAgeLabel()">
+                    <span id="age-label">25</span>
+                </div>
+            </div>
+
+            <!-- Skin Color -->
+            <div class="form-group">
+                <label for="skinColor">🎨 Preferred Skin Color</label>
+                <select id="skinColor" name="skinColor" required>
+                    <option value="" disabled selected>Select skin color</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="brown">Brown</option>
+                </select>
+            </div>
+
+            <!-- Height -->
+            <div class="form-group">
+                <label for="height">📏 Preferred Height (in cm)</label>
+                <input type="number" id="height" name="height" placeholder="Enter height" required>
+            </div>
+
+            <!-- Income -->
+            <div class="form-group">
+                <label for="income">💰 Preferred Income (optional)</label>
+                <input type="number" id="income" name="income" placeholder="Enter income">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" id="submit-button">Calculate Rarity</button>
+        </form>
+
+        <!-- Response -->
+        <div id="response" class="response">
+            <p>Your partner rarity: <span id="rarity-percentage">N/A</span></p>
+            <p>Your chances of meeting: <span id="chances-percentage">N/A</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
