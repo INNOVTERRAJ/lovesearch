@@ -27,7 +27,7 @@ document.getElementById('submit-button').addEventListener('click', async functio
       document.getElementById('submit-button').textContent = 'Calculating...';
 
       // Send data to the backend
-      const response = await fetch('https://lovesearch.onrender.com/calculate', {
+      const response = await fetch('https://lovesearch.onrender.com/calculate ', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
